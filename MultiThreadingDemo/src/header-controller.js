@@ -22,9 +22,9 @@ lqModule.controller('headerController', ['$scope', 'linkService', 'searchService
         if($window.localStorage.getItem('securityToken')){ //if page is refreshed
           $scope.userFirstName =JSON.parse($window.localStorage.getItem('userProfileData')).firstName;
           $scope.userPoints = JSON.parse($window.localStorage.getItem('userProfileData')).pointsSummary.currentPointsBalance;
-        $scope.$on('redeem-points', function (event, data) {
-            $scope.userPoints = data;
-        });
+          $scope.$on('redeem-points', function(event, data) {
+                $scope.userPoints = data;
+          });
         }
         $scope.$watch(function() {
             return applicationState.data.loggedIn;
