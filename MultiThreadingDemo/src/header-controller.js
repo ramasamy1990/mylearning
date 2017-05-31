@@ -23,7 +23,7 @@ lqModule.controller('headerController', ['$scope', 'linkService', 'searchService
           $scope.userFirstName =JSON.parse($window.localStorage.getItem('userProfileData')).firstName;
           $scope.userPoints = JSON.parse($window.localStorage.getItem('userProfileData')).pointsSummary.currentPointsBalance;
           $scope.$on('redeem-points', function(event, data) {
-                $scope.userPoints = data;
+              $scope.userPoints = data;
           });
         }
         $scope.$watch(function() {
