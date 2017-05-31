@@ -1,0 +1,97 @@
+<div ng-controller="redeemGiftCardController as redeemController">
+    <div style="background-color:${properties.backgroundColor || '#fff' @ context='styleToken'}">
+        <sly data-sly-test.removeWavy = "${properties.removeWavyPattern || 'false'}"/>             
+        <div ng-class="{'redeem-gift-card__bg':${removeWavy ? 'false':'true'}}">
+            <div class="redeem-gift-card__container" ng-init="redeemController.initUserInfo(false,'${properties.backLinkUrl}')" >
+                <div class="row">
+                    <div class="col redeem-gift-card__container__col-left">
+                        <span ng-click="redeemController.navigate('${properties.backLinkUrl}')" class="redeem-gift-card__container__col-left__back-text cursor-pointer">
+                            <sly data-sly-test.backToGiftsLabel="${'BACK TO ALL GIFT CARDS' @i18n}" />
+                            <span class="arrow-icon">&lt; </span>${properties.l_backLinkText || backToGiftsLabel} 
+                        </span>
+                        <div class="redeem-gift-card__container__col-left__box" style="background-color:${properties.infoBoxBackgroundColor || '#fff' @ context='styleToken'}; box-shadow:0 2px 5px ${properties.borderShadowColor || '0.22' @ context='styleToken'}, 0 2px 10px ${properties.borderShadowColor || '0.12' @ context='styleToken'}">
+                            <span>${'You are redeeming:' @i18n}</span>
+                            <img src="{{redeemController.rewardDetails.logopath}}"/>
+                            <span>{{redeemController.rewardDetails.name}}</span>
+                            <div class="clear"></div>
+
+                            <div class="redeem-gift-card__container__col-left__box__quanitiy-label pt-20">
+                                <sly data-sly-test.quantityText="${'QUANTITY' @i18n}" />
+                                <span class="redeem-gift-card__container__col-left__box__quantity">${properties.l_quantityLabelText || quantityText}</span>
+                            </div>
+
+                            <div class="redeem-gift-card__container__col-left__box__quanitiy-cta pl-15">
+                                <button class="redeem-gift-card__container__col-left__box__circular-button minus-button ml-0" data-ng-click="decrease(redeemController.quantity)" >-</button>
+                                <span class="redeem-gift-card__container__col-left__box__quantity">{{redeemController.quantity}}</span>
+                                <button class="redeem-gift-card__container__col-left__box__circular-button plus-button" data-ng-click="increase(redeemController.quantity)" >+</button>
+                                <div class="clear"></div>
+                            </div>				
+                            <div class="clear"></div>
+                            <hr>
+                            <div>
+                                <div class="redeem-gift-card__container__col-left__total">
+                                    ${'Total' @i18n} 
+                                </div>
+                                <div class="redeem-gift-card__container__col-left__text-green">{{numberWithCommas(redeemController.totalPoints)}} ${'points' @i18n}</div>
+                                <div class="clear"></div>
+                            </div>                                                                                                 
+                        </div>
+                    </div>
+                    <div class="redeem-gift-card__container__col-right">
+                        <sly data-sly-test.redeemHeadline="${'Redeem your gift card!' @i18n}" />
+                        <div class="redeem-gift-card__container__col-right__title">${properties.l_headlineLabel || redeemHeadline}</div>
+                        <div class="redeem-gift-card__container__col-right__text">
+                            {{redeemController.rewardDetails.description}}<br/><br/> 
+                            ${properties.l_defaultText @ context='html'}
+                        </div>
+                        <hr class="mb-30">
+                        <div>
+                            <div class="redeem-gift-card__container__col-right__subtitle">
+                                ${'Do we have the correct address on file?' @i18n}
+                            </div>
+                            <div class="redeem-gift-card__container__col-right__edit">
+                                <span ng-click="redeemController.redirectToEditProfile('${properties.profilePageLink}')" class="orange-underline cursor-pointer">${'EDIT' @i18n}</span>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="redeem-gift-card__container__col-right__text addres">
+                            {{redeemController.address.street}}<br/>
+                            <div ng-if="redeemController.address.street2">{{redeemController.address.street2}}<br/></div>
+                            {{redeemController.address.city}}, {{redeemController.address.stateProvince}} {{redeemController.address.postalCode}} 
+                        </div>
+                        <div class="mt-60"> 
+                            <div class="redeem-gift-card__container__col-right__subtitle">
+                                ${'We are emailing the confirmation receipt to:' @i18n}
+                            </div>
+                            <div class="redeem-gift-card__container__col-right__edit">
+                                <span ng-click="redeemController.redirectToEditProfile('${properties.profilePageLink}')" class="orange-underline cursor-pointer">${'EDIT' @i18n}</span>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="redeem-gift-card__container__col-right__text">
+                            {{redeemController.basicUserInfo.primaryEmail}}
+                        </div>
+                        <hr class="mx-5">
+                        <div class="redeem-gift-card__container__col-right__btn-container" data-ng-controller="linkController as links">	
+                            <div ng-if="redeemController.insufficientPointsFlag === false && redeemController.redeemFailureFlag === false">
+                                <sly data-sly-test.ctaLabel="${'Redeem NOW' @i18n}" />
+                                <a class="btn btn--green" ng-click="redeemController.redeemOrder('${properties.ctaLink}')" title="${properties.l_altText}" ng-style="isLowContrast? {'background-color' : '${properties.lowContrastButtonColor}', 'color' : '${properties.lowContrastLabelColor}'} : {'background-color' : '${properties.highContrastButtonColor}', 'color' : '${properties.highContrastLabelColor}'}">${properties.l_ctaLabel || ctaLabel}</a>
+
+                                <a class="redeem-gift-card__container__col-right__underline-link" ng-href="{{links.getRoutedLink('${properties.backLinkUrl}')}}">${'Cancel' @i18n}</a>
+                                <div class="clear"></div>
+                            </div>
+                            <div ng-if="redeemController.insufficientPointsFlag === true">
+                                <sly data-sly-test.errorMessage="${'You do not have enough points to redeem for this item, buy more points now.' @i18n}" />
+                                ${properties.l_errorText1 || errorMessage @ context='html'}
+                            </div>
+                            <div ng-if="redeemController.redeemFailureFlag === true"> 
+                                <sly data-sly-test.errorMessage="{{redeemController.errorMessage}}" />
+                                ${properties.l_errorText2 || errorMessage @ context='html'} 
+                            </div>
+                        </div>     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
