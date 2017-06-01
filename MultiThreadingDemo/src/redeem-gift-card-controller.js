@@ -70,6 +70,7 @@
                 calculateTotalPoints();
             }
         };
+        
         $scope.decrease = function(quantity) {
             if (quantity > 1) {
                 vm.quantity--;
@@ -117,8 +118,8 @@
                 },
                 function errorCallback(response) {                    
                     response.then(function(response) {                    
-                            vm.redeemFailureFlag = true;
-                            vm.errorMessage = response;
+                        vm.redeemFailureFlag = true;
+                        vm.errorMessage = response;
                     });
                 });
         }        
