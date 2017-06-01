@@ -21,11 +21,17 @@ lqModule.controller('headerController', ['$scope', 'linkService', 'searchService
         $scope.signOut=signInService.signOut;
         if($window.localStorage.getItem('securityToken')){ //if page is refreshed
           $scope.userFirstName =JSON.parse($window.localStorage.getItem('userProfileData')).firstName;
-          $scope.userPoints = JSON.parse($window.localStorage.getItem('userProfileData')).pointsSummary.currentPointsBalance;
-          $scope.$on('redeem-points', function(event, data) {
-              $scope.userPoints = data;
-          });
+          $scope.userPoints = JSON.parse($window.localStorage.getItem('userProfileData')).pointsSummary.currentPointsBalance;       
         }
+        
+        $scope.$on('update-points', function(event, data) {
+            applicationState.getSecurityToken().then(function(authToken) {
+                userProfileService.getPoints(authToken).then(function(pointsSummary) {
+                    $scope.userPoints = pointsSummary.currentPointsBalance;
+                });
+            });
+        });
+        
         $scope.$watch(function() {
             return applicationState.data.loggedIn;
             }, function watchCallback(newValue, oldValue) {

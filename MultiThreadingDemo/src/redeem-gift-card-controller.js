@@ -39,12 +39,12 @@
                 vm.redirectBackToParentPage();
             }
         }
-
+                
         function redirectBackToParentPage() {
             var wcmMode = $('#data-wcm-mode').val();
             if (wcmMode === 'wcm-disabled') {
                 if (vm.redirectPageUrl) {
-                    window.location.href = linkService.initLink(vm.redirectPageUrl);
+                    navigate(vm.redirectPageUrl);
                 } else {
                     $window.location.href = "#/home";
                 }
@@ -92,36 +92,36 @@
             }
         }
 
-        function redeemOrder(redirectUrl) {
-            rewardsService.redeemOrderReward().then(
-                function successCallback(response) {
-                    if (response.status === 200 && redirectUrl.trim().length > 0) {
-                        $rootScope.$broadcast('redeem-points', vm.currentUserPointsBalance);
-                        window.location.href = linkService.initLink(redirectUrl);
-                    }
-                },
-                function errorCallback(response) {
-                    response.then(function(response) {
-                        if (getErrorCodeFromResponse(response) === 422) {
-                            vm.insufficientPointsFlag = true;
-                        } else {
-                            vm.redeemFailureFlag = true;
-                            vm.errorMessage = response;
-                        }
+        function fetchUpdatedUserPoints(isCacheClear) {
+            if (applicationState.data.loggedIn) {
+                var securityTokenPromise = applicationState.getSecurityToken();
+                securityTokenPromise.then(function(securityToken) {
+                    userProfileService.getBasicUserInfo(securityToken, isCacheClear).then(function(userInfo) {
+                        vm.basicUserInfo = userInfo;
                     });
                 });
-        }
-
-        function getErrorCodeFromResponse(response) {
-            var errorCode = "";
-            if (response.indexOf(";") > 0 && response.indexOf("-") > 0) {
-                var errorString = response.split(";")[1].split("-")[0].trim();
-                if (errorString && errorString.length > 0) {
-                    errorCode = parseInt(errorString);
-                }
+                accountSummaryService.getPointsSummary().then(function(pointSummary) {
+                    vm.currentUserPointsBalance = pointSummary.currentPointsBalance;
+                });
             }
-            return errorCode;
         }
+        
+        function redeemOrder(redirectUrl) {
+            rewardsService.redeemOrderReward(vm.quantity).then(
+                function successCallback(response) {
+                    if (response.status === 200 && redirectUrl.trim().length > 0) {
+                       fetchUpdatedUserPoints(true);                       
+                       $rootScope.$broadcast('update-points', true);
+                       navigate(redirectUrl);   
+                    }                                           
+                },
+                function errorCallback(response) {                    
+                    response.then(function(response) {                    
+                            vm.redeemFailureFlag = true;
+                            vm.errorMessage = response;
+                    });
+                });
+        }        
 
         //--------------------- < View model exposed >
 
