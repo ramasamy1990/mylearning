@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="es"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="sling:Folder">
+    <add-to-trip
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Add to Trip"
+        sling:message="Añadir al viaje"/>    
+    <airport-shuttle
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Airport Shuttle"
+        sling:message="&#xa;Transporte al aeropuerto"/>
+    <business-center
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Business Center"
+        sling:message="Centro de negocios"/>
+    <business-certified-hotel
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Business Certified Hotel"
+        sling:message="Hotel de negocios certificado"/>
+    <double-points
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="La Quinta Returns Double Points"
+        sling:message="La Quinta Devuelve puntos dobles"/>
+    <facilities-summary
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Facilities Summary"
+        sling:message="Resumen de Instalaciones"/>
+    <filter
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Filter"
+        sling:message="Filter"/>
+    <filter-by-amenities
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Filter by amenities"
+        sling:message="Filter by amenities"/>
+    <fitness-center
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Fitness Center"
+        sling:message="Gimnasio"/>
+    <free-breakfast
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Free Breakfast"
+        sling:message="Desayuno gratis"/>
+    <free-wifi
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Fast &amp; Free Wifi"
+        sling:message="Wifi gratuito y gratuito"/>
+    <highcontrast
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="highcontrast"
+        sling:message="High Contrast"/>
+    <large-garden
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Large Garden"
+        sling:message="Gran jardín"/>
+    <last-name
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Last Name"
+        sling:message="Segundo nombre"/>
+    <list
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="List"
+        sling:message="List"/>
+    <listview
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="List View"
+        sling:message="List View"/>
+    <login
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="login"
+        sling:message="Iniciar sesión"/>
+    <logout
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="logout"
+        sling:message="Cerrar sesión"/>
+    <lowcontrast
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="lowcontrast"
+        sling:message="Low Contrast"/>
+    <map
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Map"
+        sling:message="Map"/>
+    <mapview
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Map View"
+        sling:message="Map View"/>
+    <meeting-facilities
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Meeting Facilities"
+        sling:message="Instalaciones para reuniones"/>
+    <meeting-room-picture
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Meeting Room Picture"
+        sling:message="Imagen de la sala de reuniones"/>
+    <one-hundred-percent-non-smoking
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="One Hundred Percent Non Smoking"
+        sling:message="Cien por ciento no fumadores"/>
+    <password
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Password"
+        sling:message="Contraseña"/>
+    <password-error
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Please input a password"
+        sling:message="Introduzca una contraseña"/>
+    <pets-welcome
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Pets Welcome"
+        sling:message="Mascotas bienvenidas"/>
+    <pillows-beds
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Pillowtop Beds"
+        sling:message="Camas acolchadas"/>
+    <see-less
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="See Less"
+        sling:message="Ver menos"/>
+    <see-more
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="See More"
+        sling:message="Ver más"/>    
+    <swimming-pool
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Swimming Pool"
+        sling:message="Piscina"/>
+    <top-rated-property
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Top Rated Property"
+        sling:message="&#xa;Propiedad mejor valorada"/>
+    <number-of-rooms
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="NUMBER OF ROOMS"
+        sling:message="NÚMERO DE HABITACIONES"/>
+    <total-event-space
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="TOTAL EVENT SPACE"
+        sling:message="TOTAL EVENTO ESPACIO"/>
+    <largest-event-room
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="LARGEST EVENT ROOM"
+        sling:message="SALA MÁS GRANDE DEL EVENTO"/>
+    <av-equipment
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="A/V EQUIPMENT"
+        sling:message="EQUIPO A / V"/>
+    <largest-seating-capacity
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="LARGEST SEATING CAPACITY"
+        sling:message="CAPACIDAD DE ASIENTO MÁS GRANDE"/>
+    <catering-services
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="CATERING SERVICES"
+        sling:message="SERVICIOS DE BANQUETERÍA"/>
+    <hotel-details-description
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Description"
+            sling:message="Descripción"/>
+    <hotel-policy-description
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Description"
+            sling:message="Descripción"/>
+    <read-more
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="READ MORE"
+            sling:message="LEE MAS"/>
+    <read-less
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="READ LESS"
+            sling:message="LEER MENOS"/>
+    <property-info
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Property Info"
+            sling:message="Información de la propiedad"/>
+    <hotel-detials-email
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Email"
+            sling:message="Email"/>
+    <hotel-details-phone
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Phone"
+            sling:message="Teléfono"/>
+    <hotel-details-based-on
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Based on"
+            sling:message="Residencia en"/>
+    <hotel-details-reviews
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="reviews"
+            sling:message="Comentarios"/>
+    <hotel-directions-Phone
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Phone"
+        sling:message="Phone"/>
+    <hotel-directions-direction-error-msg-src
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Please enter source Location."
+        sling:message="Introduzca la ubicación de la fuente."/>
+    <hotel-directions-direction-error-msg-dest
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Please enter destination Location."
+        sling:message="Introduzca la ubicación de destino."/>
+    <hotel-directions-get-directions
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="GET DIRECTIONS"
+        sling:message="OBTENER LAS DIRECCIONES"/>
+    <hotel-directions-regional-directions
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Regional Directions"
+        sling:message="Direcciones Regionales"/>
+    <hotel-directions-airport-directions
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Airport Directions"
+        sling:message="Direcciones del aeropuerto"/>
+    <save-to-favorites
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Save to Favorites"
+            sling:message="Guardar en Favoritos"/>
+    <saved-to-favorites
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Saved to Favorites"
+        sling:message="Guardado en Favoritos"/>
+    <rates-from
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="RATES FROM"
+            sling:message="TARIFAS DESDE"/>
+    <per-night
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="/NIGHT"
+            sling:message="/NOCHE"/>
+    <average-per-night
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="AVG/NIGHT"
+            sling:message="AVG/NOCHE"/>
+    <view-all
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="View all"
+            sling:message="Ver todo"/>
+    <photos
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="photos"
+            sling:message="Fotos"/>
+    <print
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Print"
+            sling:message="Impresión"/>
+ 	<hotel-directions-invalid-location-error-msg
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="We could not find the above address."
+        sling:message="No pudimos encontrar la dirección anterior."/>
+    <hotel-directions-email-title
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Driving Directions"
+            sling:message="Indicaciones de viaje"/>
+     <account-summary-you-have
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="You have"
+            sling:message="Tienes"/>
+     <account-summary-points
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="points"
+            sling:message="puntos"/>
+     <account-summary-redeem-points
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="REDEEM POINTS"
+            sling:message="REDUCIR PUNTOS"/>
+     <account-summary-get-more-points
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="GET MORE POINTS"
+            sling:message="OBTENGA MÁS PUNTOS"/>
+            Welcome        
+     <account-summary-welcome
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Welcome"
+            sling:message="Bienvenido"/>
+    <account-summary-only
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="only"
+            sling:message="solamente"/>
+    <account-summary-points
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="points"
+            sling:message="puntos"/>
+    <account-summary-congrats
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Congrats"
+            sling:message="Felicidades"/>
+    <account-summary-elite
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Elite Member"
+            sling:message="Elite Miembro"/>
+    <hotel-details-favoritesErrorMessage
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Please select 10 or fewer favorite hotels."
+            sling:message="Seleccione 10 o menos hoteles favoritos."/>            
+	<upcoming-stay
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="Upcoming stay"
+			sling:message="Próxima estancia"/>
+	<view-my-reservations
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="VIEW MY RESERVATIONS"
+			sling:message="VER MIS RESERVACIONES"/>
+	<multiple-rooms
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="Multiple Rooms Reserved"
+			sling:message="Varias habitaciones reservadas"/>
+	<need-anything
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="Need anything? 901-374-0330"
+			sling:message="¿Necesito cualquier cosa? 901-374-0330"/>
+    <account-summary-benefit-icon
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="benefit-icon"
+            sling:message="Beneficio-icono"/>
+	<account-summary-no-upcoming-stay
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="You don't have any stays coming up"
+            sling:message="Usted no tiene ninguna estancia que viene para arriba"/>
+    <current-stay
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Current Stay"
+            sling:message="Estancia actual"/>
+    <view-details
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="View Details"
+            sling:message="Ver detalles"/>
+    <edit
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Edit"
+        sling:message="Editar"/>
+   	<reservations-previous-stays
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Previous Stays"
+        sling:message="Estancias previas"/>
+    <reservations-review
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Review"
+        sling:message="revisión"/>
+    <reservations-view-details
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="View Details"
+        sling:message="Ver detalles"/>
+    <reservations-load-more
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Load More"
+        sling:message="Carga más"/> 
+    <first-name
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="First Name"
+        sling:message="Nombre de pila"/>
+    <last-name
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="Last Name"
+        sling:message="Apellido"/>
+    <load-more
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Load More"
+            sling:message="Carga más"/>
+    <warning-box-title
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Did we lose you?"
+            sling:message="¿Te perdimos?"/>
+    <warning-box-subheading-two
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Select CONTINUE to extend your session."
+            sling:message="Seleccione CONTINUAR para ampliar su sesión."/>
+    <warning-box-end-session
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="END SESSION"
+            sling:message="SESIÓN FINAL"/>
+    <warning-box-continue-session
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="CONTINUE"
+            sling:message="CONTINUAR"/>
+    <warning-box-subheading
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Your session will expire automatically in approximately 2 minutes.<br/>Select \u0022CONTINUE\u0022 to extend your session."
+            sling:message="Su sesión expirará automáticamente en aproximadamente 2 minutos.<br/>Seleccionar \CONTINUAR\u0022 Para ampliar su sesión."/>
+    <session-expiry-confirmation-box-title
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Your Session Has Expired"
+            sling:message="Su sesión ha caducado"/>
+    <session-expiry-confirmation-box-message
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Due to an extended period of inactivity, we have ended your session."
+            sling:message="Debido a un período prolongado de inactividad, hemos finalizado su sesión."/>
+    <session-expiry-confirmation-box-close
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="CLOSE"
+            sling:message="CERCA"/>
+    <saved-hotels-favorite-hotels
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Favorite Hotels"
+            sling:message="Hoteles favoritos"/>
+    <saved-hotels-book-upto-10-hotels
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Book up to 10 of your favorite hotels. We will keep them here so you can book at any time."
+            sling:message="Reserve hasta 10 de sus hoteles favoritos. Los mantendremos aquí para que pueda reservar en cualquier momento."/>
+    <saved-hotels-you-havent-favorited-any-hotels
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="You haven't favorited any hotels."
+            sling:message="No has favorecido ningún hotel."/>
+    <saved-hotels-find-hotels
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="FIND HOTELS"
+            sling:message="BUSCAR HOTELES"/>
+    <saved-hotels-book-now
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="BOOK NOW"
+            sling:message="RESERVAR AHORA"/>
+    <account-basic-user-heading
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Your Information"
+            sling:message="Tu información"/>
+    <account-basic-user-first-name
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="FIRST NAME"
+            sling:message="NOMBRE DE PILA"/>
+    <account-basic-user-email
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="EMAIL"
+            sling:message="EMAIL"/>
+    <account-basic-user-address
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="ADDRESS"
+            sling:message="DIRECCIÓN"/>
+    <account-basic-user-company
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="COMPANY NAME"
+            sling:message="NOMBRE DE EMPRESA"/>
+    <account-basic-user-last-name
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="LAST NAME"
+            sling:message="APELLIDO"/>
+    <account-basic-user-phone
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="PHONE NUMBERS"
+            sling:message="NÚMEROS DE TELÉFONO"/>
+    <account-basic-user-primary
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="primary"
+            sling:message="primario"/>
+    <account-basic-user-alternate
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="alternate"
+            sling:message="alterno"/>
+    <save-edit
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Save Edits"
+            sling:message="Guardar Ediciones"/>
+    <cancel
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Cancel"
+            sling:message="Cancelar"/>
+    <email-address
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Email Address"
+            sling:message="Dirección de correo electrónico"/>
+    <account-basic-user-primary-phone
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Primary phone number"
+            sling:message="Número de teléfono primario"/>
+    <account-basic-user-global-error
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Form submission error"
+            sling:message="Error de envío de formulario"/>
+    <account-basic-user-sec-phone
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Secondary phone number"
+            sling:message="Numero de telefono secundario"/>
+    <account-basic-user-remove
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Remove"
+            sling:message="retirar"/>
+    <account-basic-user-add-phone
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Add another phone number"
+            sling:message="Añadir otro número de teléfono"/>
+    <account-basic-user-optional
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="optional"
+            sling:message="Opcional"/>
+    <account-activity-all-activities
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="All Activities"
+            sling:message="Todas las actividades"/>
+    <account-activity-earned
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Points Earned"
+            sling:message="Puntos ganados"/>
+    <account-activity-ordered
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Rewards Ordered"
+            sling:message="Recompensas ordenadas"/>
+    <account-activity-current-month
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Current Month"
+            sling:message="Mes actual"/>
+    <account-activity-points
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="points"
+            sling:message="puntos"/>
+    <account-activity-current-month
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="No activity detected for the specified type and date range, please adjust the filters above to broaden your search."
+            sling:message="No hay actividad detectada para el tipo especificado y el rango de fechas, ajuste los filtros anteriores para ampliar su búsqueda."/>
+    <partner-offers-headline
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="We have sweet offers from our partners, too!"
+            sling:message="Tenemos ofertas dulces de nuestros socios, también!"/>
+    <travel-partner-text
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Car Rentals"
+            sling:message="Alquiler de coches"/>
+    <exchange-partner-text
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Retail"
+            sling:message="Al por menor"/>
+    <see-all-partner-offers
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="see all partner offers"
+            sling:message="Todas las ofertas de socios"/>
+    <gift-cards-back-to-redemption-options
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="BACK TO REDEMPTION OPTIONS"
+            sling:message="VOLVER A LAS OPCIONES DE REEMBOLSO"/>
+    <gift-cards-gift-cards
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="gift-cards"
+            sling:message="Tarjetas de regalo"/>
+    <gift-cards-find-gift-cards-starting-at-7,500-when-you-sign-in-or-join-La-Quinta-returns
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Find Gift Cards starting at 7,500 when you sign-in or join La Quinta Returns"
+            sling:message="Buscar tarjetas de regalo a partir de 7.500 al iniciar sesión o unirse a La Quinta Returns"/>
+    <gift-cards-only
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Only"
+            sling:message="Solamente"/>
+    <gift-cards-points
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="POINTS"
+            sling:message="PUNTOS"/>
+    <gift-cards-learn-more
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="learn more"
+            sling:message="aprende más"/>            
+    <password-success-message
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Password Updated Successfully"
+            sling:message="Contraseña actualizada exitosamente"/>
+    <min-char-password-message
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Must be at least 6 characters"
+            sling:message="Debe tener como mínimo 6 caracteres"/>
+    <current-password
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Current password"
+            sling:message="Contraseña actual"/>
+    <new-password
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="New password"
+            sling:message="Nueva contraseña"/>
+    <new-password
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="confirm new password"
+            sling:message="confirmar nueva contraseña"/>
+    <password-mismatch
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Password did not match"
+            sling:message="La contraseña no coincidió"/>
+    <email-error-message
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Please enter a valid email address"
+            sling:message="Por favor, introduce una dirección de correo electrónico válida"/>
+    <returns-earn-points-hero-headline
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Incoming: Points!"
+            sling:message="Entrantes: ¡Puntos!"/>
+    <returns-earn-points-left-section-headline
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Book a Stay"
+            sling:message="Reservar una estancia"/>
+    <returns-earn-points-middle-section-headline
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="10 Points/Dollar"
+            sling:message="10 Puntos / Dólar"/>
+    <returns-earn-points-right-section-headline
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Bonus Points!"
+            sling:message="¡Puntos extra!"/>
+    <whats-nearby
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="What&apos;s Nearby"
+            sling:message="Qué hay cerca"/>
+    <need-more-points
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="Need more points"
+			sling:message="¿Necesita más puntos?"/>
+    <redeem-now
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Redeem NOW"
+            sling:message="Canjear ahora"/>
+    <redeem-total
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Total"
+            sling:message="Total"/>
+    <redeem-email-receipt
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="We are emailing the confirmation receipt to:"
+            sling:message="Enviamos el recibo de confirmación por correo electrónico a:"/>
+    <redeem-address-change
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Do we have the correct address on file?"
+            sling:message="¿Tenemos la dirección correcta en el archivo?"/>
+    <redeem-message
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="You are redeeming:"
+            sling:message="Usted está redimiendo:"/>
+	<redeem-back-button-label
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="BACK TO ALL GIFT CARDS"
+            sling:message="VOLVER A TODAS LAS TARJETAS DE REGALO"/>
+    <redeem-error-message
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="You do not have enough points to redeem for this item, buy more points now."
+            sling:message="No tienes suficientes puntos para canjear por este artículo, compra más puntos ahora."/>
+    <redeem-headline-label
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="Redeem your gift card!"
+            sling:message="¡Redimir su tarjeta de regalo!"/>
+    <quantity
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="QUANTITY"
+            sling:message="CANTIDAD"/>
+</jcr:root>
