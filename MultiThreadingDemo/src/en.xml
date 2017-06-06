@@ -597,39 +597,39 @@
 			sling:key="Need more points"
 			sling:message="Need more points?"/>
     <redeem-now
-            jcr:primaryType="sling:MessageEntry"
-            sling:key="Redeem NOW"
-            sling:message="Redeem NOW"/>
+       jcr:primaryType="sling:MessageEntry"
+       sling:key="Redeem NOW"
+       sling:message="Redeem NOW"/>
     <redeem-total
-            jcr:primaryType="sling:MessageEntry"
-            sling:key="Total"
-            sling:message="Total"/>
-	<redeem-email-receipt
-            jcr:primaryType="sling:MessageEntry"
-            sling:key="We are emailing the confirmation receipt to:"
-            sling:message="We are emailing the confirmation receipt to:"/>
+       jcr:primaryType="sling:MessageEntry"
+       sling:key="Total"
+       sling:message="Total"/>
+    <redeem-email-receipt
+       jcr:primaryType="sling:MessageEntry"
+       sling:key="We are emailing the confirmation receipt to:"
+       sling:message="We are emailing the confirmation receipt to:"/>
     <redeem-address-change
-            jcr:primaryType="sling:MessageEntry"
-            sling:key="Do we have the correct address on file?"
-            sling:message="Do we have the correct address on file?"/>
+       jcr:primaryType="sling:MessageEntry"
+       sling:key="Do we have the correct address on file?"
+       sling:message="Do we have the correct address on file?"/>
     <redeem-message
-            jcr:primaryType="sling:MessageEntry"
-            sling:key="You are redeeming:"
-            sling:message="You are redeeming:"/>
-	<redeem-back-button-label
-            jcr:primaryType="sling:MessageEntry"
-            sling:key="BACK TO ALL GIFT CARDS"
-            sling:message="BACK TO ALL GIFT CARDS"/>
+       jcr:primaryType="sling:MessageEntry"
+       sling:key="You are redeeming:"
+       sling:message="You are redeeming:"/>
+    <redeem-back-button-label
+       jcr:primaryType="sling:MessageEntry"
+       sling:key="BACK TO ALL GIFT CARDS"
+       sling:message="BACK TO ALL GIFT CARDS"/>
     <redeem-error-message
-            jcr:primaryType="sling:MessageEntry"
-            sling:key="You do not have enough points to redeem for this item, buy more points now."
-            sling:message="You do not have enough points to redeem for this item, buy more points now."/>
+       jcr:primaryType="sling:MessageEntry"
+       sling:key="You do not have enough points to redeem for this item, buy more points now."
+       sling:message="You do not have enough points to redeem for this item, buy more points now."/>
     <redeem-headline-label
-            jcr:primaryType="sling:MessageEntry"
-            sling:key="Redeem your gift card!"
-            sling:message="Redeem your gift card!"/>
+       jcr:primaryType="sling:MessageEntry"
+       sling:key="Redeem your gift card!"
+       sling:message="Redeem your gift card!"/>
     <quantity
-            jcr:primaryType="sling:MessageEntry"
-            sling:key="QUANTITY"
-            sling:message="QUANTITY"/>
+       jcr:primaryType="sling:MessageEntry"
+       sling:key="QUANTITY"
+       sling:message="QUANTITY"/>
 </jcr:root>

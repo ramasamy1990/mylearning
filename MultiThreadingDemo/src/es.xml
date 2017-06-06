@@ -601,39 +601,39 @@
 			sling:key="Need more points"
 			sling:message="¿Necesita más puntos?"/>
     <redeem-now
-            jcr:primaryType="sling:MessageEntry"
-            sling:key="Redeem NOW"
-            sling:message="Canjear ahora"/>
+       jcr:primaryType="sling:MessageEntry"
+       sling:key="Redeem NOW"
+       sling:message="Canjear ahora"/>
     <redeem-total
-            jcr:primaryType="sling:MessageEntry"
-            sling:key="Total"
-            sling:message="Total"/>
+       jcr:primaryType="sling:MessageEntry"
+       sling:key="Total"
+       sling:message="Total"/>
     <redeem-email-receipt
-            jcr:primaryType="sling:MessageEntry"
-            sling:key="We are emailing the confirmation receipt to:"
-            sling:message="Enviamos el recibo de confirmación por correo electrónico a:"/>
+       jcr:primaryType="sling:MessageEntry"
+       sling:key="We are emailing the confirmation receipt to:"
+       sling:message="Enviamos el recibo de confirmación por correo electrónico a:"/>
     <redeem-address-change
-            jcr:primaryType="sling:MessageEntry"
-            sling:key="Do we have the correct address on file?"
-            sling:message="¿Tenemos la dirección correcta en el archivo?"/>
+       jcr:primaryType="sling:MessageEntry"
+       sling:key="Do we have the correct address on file?"
+       sling:message="¿Tenemos la dirección correcta en el archivo?"/>
     <redeem-message
-            jcr:primaryType="sling:MessageEntry"
-            sling:key="You are redeeming:"
-            sling:message="Usted está redimiendo:"/>
-	<redeem-back-button-label
-            jcr:primaryType="sling:MessageEntry"
-            sling:key="BACK TO ALL GIFT CARDS"
-            sling:message="VOLVER A TODAS LAS TARJETAS DE REGALO"/>
+       jcr:primaryType="sling:MessageEntry"
+       sling:key="You are redeeming:"
+       sling:message="Usted está redimiendo:"/>
+    <redeem-back-button-label
+       jcr:primaryType="sling:MessageEntry"
+       sling:key="BACK TO ALL GIFT CARDS"
+       sling:message="VOLVER A TODAS LAS TARJETAS DE REGALO"/>
     <redeem-error-message
-            jcr:primaryType="sling:MessageEntry"
-            sling:key="You do not have enough points to redeem for this item, buy more points now."
-            sling:message="No tienes suficientes puntos para canjear por este artículo, compra más puntos ahora."/>
+       jcr:primaryType="sling:MessageEntry"
+       sling:key="You do not have enough points to redeem for this item, buy more points now."
+       sling:message="No tienes suficientes puntos para canjear por este artículo, compra más puntos ahora."/>
     <redeem-headline-label
-            jcr:primaryType="sling:MessageEntry"
-            sling:key="Redeem your gift card!"
-            sling:message="¡Redimir su tarjeta de regalo!"/>
+       jcr:primaryType="sling:MessageEntry"
+       sling:key="Redeem your gift card!"
+       sling:message="¡Redimir su tarjeta de regalo!"/>
     <quantity
-            jcr:primaryType="sling:MessageEntry"
-            sling:key="QUANTITY"
-            sling:message="CANTIDAD"/>
+       jcr:primaryType="sling:MessageEntry"
+       sling:key="QUANTITY"
+       sling:message="CANTIDAD"/>
 </jcr:root>
