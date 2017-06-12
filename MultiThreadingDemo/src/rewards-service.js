@@ -279,17 +279,17 @@
        
        /**
         * This method clears reward data on sign-out
-        */
+        */          
         $rootScope.$on('signout-cache-flush', function () {
-        	rewardsObject.userGiftCards=[];
-			rewardsObject.userPartnerOffers = [];
-			service.data.selectedReward = {};
-            service.data.redeemOfferConfirmationNumber = {};
+            rewardsObject.userGiftCards=[];
+            rewardsObject.userPartnerOffers = [];
+            service.data.selectedReward = {};
+            service.data.redeemOfferConfirmationNumber = {};            
        });
         
 		//-----------------< Exposed interface >
 		var service = {
-				getAllGiftCards: getAllGiftCards,
+                getAllGiftCards: getAllGiftCards,
 				getUserPointsSummary: getUserPointsSummary,
 				getPartnerOffersAdminPageData: getPartnerOffersAdminPageData,
 				getgiftCardsAdminPageData: getgiftCardsAdminPageData,
@@ -297,9 +297,9 @@
 				rewardsObject: rewardsObject,
 				setSelectedReward: setSelectedReward,
 				getRewardDetails: getRewardDetails,
-                redeemOrderReward: redeemOrderReward,
+                redeemOrderReward: redeemOrderReward,                
                 setRedeemOfferConfirmationNumber: setRedeemOfferConfirmationNumber,
-				data:{
+                data:{
 				    selectedReward:{},
 				    redeemOfferConfirmationNumber: {}				  
 				}
