@@ -284,7 +284,7 @@
             rewardsObject.userGiftCards=[];
             rewardsObject.userPartnerOffers = [];
             service.data.selectedReward = {};
-            service.data.redeemOfferConfirmationNumber = {};            
+			service.data.redeemOfferConfirmationNumber = {};            
        });
         
 		//-----------------< Exposed interface >
@@ -298,7 +298,7 @@
 				setSelectedReward: setSelectedReward,
 				getRewardDetails: getRewardDetails,
                 redeemOrderReward: redeemOrderReward,                
-                setRedeemOfferConfirmationNumber: setRedeemOfferConfirmationNumber,
+				setRedeemOfferConfirmationNumber: setRedeemOfferConfirmationNumber,
                 data:{
 				    selectedReward:{},
 				    redeemOfferConfirmationNumber: {}				  
