@@ -1,0 +1,39 @@
+<div ng-controller="redeemOfferConfirmationController as redeemController" ng-init="redeemController.initUserInfo(false)" class="use-points-gift-card-confirm pt-50 pb-80 ${properties.removeWavyPattern? '' : 'bg-wavy'}" style="background-color:${properties.backgroundColor || '#fff' @ context='styleToken'}">    
+    <sly data-sly-test.confirmationHeadline="${'Your gift card is on its way!' @i18n}" />
+	<h1 class="use-points-gift-card-confirm__title">${properties.l_confirmationHeadlineLabel || confirmationHeadline}</h1>
+	<div class="use-points-gift-card-confirm__content">
+		<div class="use-points-gift-card-confirm__left">
+			<img class="use-points-gift-card-confirm__gift-card" src="{{redeemController.rewardDetails.logopath}}">
+		</div>
+		<div class="use-points-gift-card-confirm__right">
+			<div class="use-points-gift-card-confirm__text">
+				<div class="use-points-gift-card-confirm__name" ng-bind-html="redeemController.rewardDetails.name"></div>
+				<div class="use-points-gift-card-confirm__order">${'Order Number:' @i18n} {{redeemController.orderNumber}}</div>
+                <sly data-sly-test.desc="${'Please allow 10-15 business days for the reward item(s) to arrive.' @i18n}" />
+				<div class="use-points-gift-card-confirm__message">${properties.l_description || desc}</div>
+                <sly data-sly-test.accountActivityLabel="${'See La Quinta Returns account activity' @i18n}" />
+				<a data-ng-controller="linkController as links" class="use-points-gift-card-confirm__link color-underline color-underline--orange" ng-href="{{links.getRoutedLink('${properties.activityLinkUrl}')}}">${properties.l_activityLinkLabel || accountActivityLabel}</a>
+			</div>
+		</div>
+	</div>
+	<div class="use-points-gift-card-confirm__contact-info">
+		<div class="use-points-gift-card-confirm__left">
+			<div class="use-points-gift-card-confirm__contact-address">
+				<div class="use-points-gift-card-confirm__contact-header">${'Mailing TO:' @i18n}</div>
+				<div class="use-points-gift-card-confirm__contact-details mt-10">{{redeemController.address.street}} {{redeemController.address.street2}} {{redeemController.address.city}}, {{redeemController.address.stateProvince}} {{redeemController.address.postalCode}}</div>
+			</div>
+		</div>
+		<div class="use-points-gift-card-confirm__right">
+			<div class="use-points-gift-card-confirm__contact-email">
+				<div class="use-points-gift-card-confirm__contact-header">${'Email confirmation sent to:' @i18n}</div>
+				<div class="use-points-gift-card-confirm__contact-details  mt-10">{{redeemController.basicUserInfo.primaryEmail}}</div>
+			</div>
+		</div>
+	</div>      
+</div>
+<div data-sly-test.hidePhoneComponent="${!properties.hidePhoneComponent}" class="account-summary-banner__contacts" ng-style="account.cssstyle" style="background-color:${properties.phoneBannerBgColor || '#ed8a01' @ context='styleToken'}; background-image:${properties.removePhoneBannerWavyBackground ? 'none': 'url(/etc/clientlibs/laquinta/header/imgs/wavy-background-transp.png)' @ context='styleToken'}">
+   <div class="icon icon--phone"></div>
+   <div class="h2">${properties.phoneNumber || '1-800-642-4258'}</div>
+   <sly data-sly-test.infoText="${'Call us if you have any questions regarding your online order.' @i18n}" />
+   <div>${properties.l_infoText || infoText @ context='html'}</div>
+</div>
