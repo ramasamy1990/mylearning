@@ -103,7 +103,7 @@ public class PageTranslationConfigurationService implements WorkflowProcess {
 
                 // Update workflow metadata node with the Submission Due Date. Submit this property only if there is a configuration available
                 if(StringUtils.isNotBlank(submissionDueDate)){
-	           workflowMetaDataNode.setProperty("submissionDueDate", new Date(submissionDueDate).getTime());
+                   workflowMetaDataNode.setProperty("submissionDueDate", new Date(submissionDueDate).getTime());
                 }
                 
                 // Save changes
