@@ -106,7 +106,7 @@ public class PageTranslationConfigurationService implements WorkflowProcess {
 	           workflowMetaDataNode.setProperty("submissionDueDate", new Date(submissionDueDate).getTime());
                 }
                 
-	        // Save changes
+                // Save changes
                 jcrSession.save();
             }
 
